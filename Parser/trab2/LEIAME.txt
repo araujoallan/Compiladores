@@ -1,0 +1,10 @@
+Construção de Compiladores - Trabalho 2 - Ciência da Computação
+
+Grupo: Allan Araujo Silva, Rafael Igor Athaydes
+
+Instruções de Compilação:
+-> Abra o Makefile disponivel em arquivo;
+-> Substitua o campo <arquivo_entrada> pelo nome do seu arquivo de entrada; 
+-> Executar na bash o comando: "make";
+-> Se não houver problemas de sintaxe ou no scanner, será gerado um pdf com a parsing tree referente ao arquivo de entrada;
+
