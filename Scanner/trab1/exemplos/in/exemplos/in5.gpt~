@@ -1,0 +1,35 @@
+algoritmo calculoCR; //TESTE -> IGNORAR COMENTARIO
+
+variaveis
+    chs : real;
+    media : real;
+    schs : real;
+	smedia : real;
+	cr : real;
+	n : inteiro;
+	cont : inteiro;
+fim_variaveis
+
+inicio
+	schs := 0.0;
+	smedia := 0.0;
+	cont := 0;
+	imprima("Digite o numero de Matérias:");
+	n := leia();
+	
+	enquanto n <= cont faca
+		imprima("Digite o CHS :");
+		
+		chs := leia();
+
+		imprima("Digite a Media:");
+		media := leia();
+		
+		smedia := smedia + (chs*media);
+		schs := schs + chs;
+		cont := cont+1;
+	fim_enquanto
+	
+	cr := smedia / schs;
+	imprima("Seu CR é: ",cr);
+fim

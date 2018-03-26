@@ -1,0 +1,12 @@
+Construção de Compiladores - Trabalho 1 - Ciência da Computação
+
+Arquivo flex(trab1.l)
+Grupo: Allan Araujo Silva, Rafael Igor Athaydes
+
+Instruções de Compilação:
+-> Usar Makefile disponivel em arquivo;
+-> executar na bash o comando: "./trab1 < <nome_do_arquivo_teste.gpt>";
+
+
+
+ 

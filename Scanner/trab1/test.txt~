@@ -1,0 +1,10 @@
+algoritmo ola_mundo;
+
+inicio
+	imprima_com_2
+	264
+	'a'
+	'225'
+	"aISJAISJIAJSIAJS"
+
+fim

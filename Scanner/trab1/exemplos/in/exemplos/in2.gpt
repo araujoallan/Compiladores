@@ -1,0 +1,11 @@
+//Comentario de Linha - essa linha deve ser ignorada!
+
+algoritmo ola_mundo_loop;
+
+inicio
+    se altura >= 1.80 entao
+        imprima("Voce é alto!");
+    senao
+		se altura <= 1.5 entao
+			imprima("Você não é alto!");
+fim

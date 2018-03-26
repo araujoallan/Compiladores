@@ -1,0 +1,67 @@
+%{
+#include <stdio.h>
+%}
+digito [0-9]
+naozero [1-9]
+letra [a-zA-Z]
+
+palavraReservada "fim_variaveis"|"algoritmo"|"variaveis"|"inteiro"|"real"|"verdadeiro"|"falso"|"e"|"ou"|"nao"|"caractere"|"literal"|"logico"|"inicio"|"fim"|"se"|"senaoentao"|"fim_se"|"enquanto"|"faca"|"fim_enquanto"|"para"|"de"|"ate"|"fim_para"|"matriz"|"inteiros"|"reais"|"caracteres"|"literais"|"logicos"|"funcao"|"retorne"|"passo"
+identificador [a-zA-Z][a-zA-Z0-9"_"]*[a-zA-Z0-9]
+inteiro (({naozero}{digito}*)|0)
+real {naozero}{digito}*"."{digito}*
+caractere "'".{1}"'"
+string "\"".*"\""
+logico ("verdadeiro"|"falso")
+opAritmetico ("+"|"-"|"/"|"*"|"++")
+opRelacional ("<"|">"|"="|"<="|">="|"<>")
+opLogico ("e"|"ou"|"nao")
+atribuicao ":="
+simboloEspecial ("("|")"|"["|"]"|","|";"|":")
+desconhecido [^\n\t\r]*"#"[^\n\t\r]*
+%x C_COMMENT
+
+%%
+{opLogico} {printf("%s -> OPERADOR_LOGICO\n", yytext);}
+
+{logico} {printf("%s -> LOGICO\n", yytext);}
+
+{palavraReservada} {printf("%s -> PALAVRA_RESERVADA\n", yytext);}
+
+{inteiro} {printf("%s -> INTEIRO\n", yytext);}
+
+"0"{digito}* {printf("%s -> IGNORADO\n",yytext);} // Ignorar numeros do tipo 010, 0147
+
+{identificador} {printf("%s -> IDENTIFICADOR\n", yytext);}
+
+{real} {printf("%s -> REAL\n", yytext);}
+
+"0"{digito}*"."{digito}* {printf("%s-> IGNORADO\n",yytext);} 
+
+{caractere} {printf("%s -> CARACTERE\n", yytext);}
+
+"'".*"'" {} //Ignorar qualquer literal com aspas simples
+
+{string} {printf("%s -> LITERAL\n", yytext);}
+
+{atribuicao} {printf("%s -> ATRIBUICAO\n", yytext);}
+
+"/*"            { BEGIN(C_COMMENT); }
+<C_COMMENT>"*/" { BEGIN(INITIAL); }
+<C_COMMENT>.[\t\n]?    { }
+
+
+{opAritmetico} {printf("%s -> OPERADOR_ARITMETICO\n", yytext);}
+
+{opRelacional} {printf("%s -> OPERADOR_RELACIONAL\n", yytext);}
+
+{simboloEspecial} {printf("%s -> SIMBOLO_ESPECIAL\n", yytext);}
+
+{desconhecido} {printf("%s -> DESCONHECIDO\n", yytext);}
+
+"//".* {}
+
+[ \t\n] {}
+. {}
+%%
+
+

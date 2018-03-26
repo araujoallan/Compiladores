@@ -1,0 +1,27 @@
+algoritmo somaPa;
+
+variaveis
+    a1 : inteiro;
+    an : inteiro;
+	razao : inteiro;
+	i : inteiro;
+	soma : inteiro;
+
+fim_variaveis
+
+inicio
+    imprima("Digite um inteiro :");
+    a1 := leia();
+
+    imprima(a1, ", digite outro inteiro :");
+    an := leia();
+
+	imprima(a1, ", digite outro inteiro :");
+    razao := leia();
+    
+	para i de a1 ate an passo -1 faca
+        soma := soma + razao;
+
+	fim_para
+	imprima("Soma é igual a:", soma);	
+fim

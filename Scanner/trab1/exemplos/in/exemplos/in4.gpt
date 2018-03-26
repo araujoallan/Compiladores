@@ -1,0 +1,21 @@
+algoritmo teste_vars;
+
+variaveis
+    i : inteiro;
+    r : real;
+fim_variaveis
+
+inicio
+    i := 42;
+    i := -42;
+    i := -000058;
+    i := +000255; 
+    i := 0xFFFFFF;
+    i := 0XFF55854F;
+    i := 0xEfaB905;
+    i := 0c03711547;
+    i := 0C0370014; 
+    i := 0b1001001101;
+  
+    r := 1.1.1;
+fim

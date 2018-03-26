@@ -1,0 +1,12 @@
+algoritmo em_branco;
+
+/*Ficamos sem ideia para testes, mas espero que
+esse comentario seja ignorado...*/
+
+inicio
+	x = 5;
+	
+	enquanto (x < 10) faca
+		imprima("Trabalho de       compiladores");
+	fim_enquanto 
+fim

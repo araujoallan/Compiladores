@@ -1,0 +1,5 @@
+all: 
+	flex trab1.l
+	gcc lex.yy.c -lfl
+	./a.out < test2.txt
+	
