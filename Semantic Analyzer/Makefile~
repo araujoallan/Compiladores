@@ -1,0 +1,10 @@
+app: main.o tabelaHash.o
+    app main.o tabelaHash.o
+
+main.o: main.c tabelaHash.h
+    main.c tabelaHash.h
+
+tabelaHash.o: tabelaHash.c tabelaHash.h
+    tabelaHash.c tabelaHash.h
+
+

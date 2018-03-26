@@ -1,0 +1,4 @@
+INTRUÇÕES PARA COMPILAÇÃO DO TRABALHO
+
+1- Executando com 'make' o programa é compilado e o arquivo 'trab3' é criado.
+2- Para a execução é necessário que o nome do arquivo de entrada seja passado como argumento, exemplo: ./trab3 ex13.gpt.
